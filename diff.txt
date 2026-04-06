@@ -1,0 +1,702 @@
+diff --git a/index.html b/index.html
+index 85a1a5a..4294d51 100644
+--- a/index.html
++++ b/index.html
+@@ -1,223 +1,22 @@
+ <!DOCTYPE html>
++
+ <html lang="en">
+ <head>
+-<meta charset="UTF-8">
+-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+-<title>Online Tutoring for Mathematics & Science — Jaagrut</title>
+-<meta name="description" content="Jaagrut offers live online tutoring for Mathematics and Science, Grades 6-12. CBSE, ICSE, JEE, NEET, KCET and international boards. Bengaluru. Est. 2007.">
+-<meta property="og:title" content="Online Tutoring for Mathematics & Science — Jaagrut">
+-<meta property="og:description" content="Jaagrut offers live online tutoring for Mathematics and Science, Grades 6-12. CBSE, ICSE, JEE, NEET, KCET and international boards. Bengaluru. Est. 2007.">
+-<meta property="og:url" content="https://www.jaagrut.com/index.html">
+-<meta property="og:type" content="website">
+-<meta property="og:site_name" content="Jaagrut">
+-<link rel="canonical" href="https://www.jaagrut.com/index.html">
++<meta charset="utf-8"/>
++<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
++<title>Online Tutoring for Mathematics &amp; Science — Jaagrut</title>
++<meta content="Jaagrut offers live online tutoring for Mathematics and Science, Grades 6-12. CBSE, ICSE, JEE, NEET, KCET and international boards. Bengaluru. Est. 2007." name="description"/>
++<meta content="Online Tutoring for Mathematics &amp; Science — Jaagrut" property="og:title"/>
++<meta content="Jaagrut offers live online tutoring for Mathematics and Science, Grades 6-12. CBSE, ICSE, JEE, NEET, KCET and international boards. Bengaluru. Est. 2007." property="og:description"/>
++<meta content="https://www.jaagrut.com/index.html" property="og:url"/>
++<meta content="website" property="og:type"/>
++<meta content="Jaagrut" property="og:site_name"/>
++<link href="https://www.jaagrut.com/index.html" rel="canonical"/>
+ <!-- Google Analytics — replace GA_MEASUREMENT_ID with your GA4 ID -->
+ <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+ <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","GA_MEASUREMENT_ID");</script> -->
+-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@0,300;0,400;0,500&display=swap" rel="stylesheet">
+-<style>
+-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+-:root{
+-  --red:#8B1A1A;--red-l:#A82020;--gold:#C8922A;
+-  --cream:#FAF7F2;--cream-d:#F2EDE4;--cream-dp:#E8E0D4;
+-  --text:#1C1A17;--muted:#3D3028;--faint:#8A8070;--border:#DDD4C4;
+-  --deep:#2E1F12;
+-}
+-html{scroll-behavior:smooth;}
+-body{font-family:'EB Garamond',serif;background:var(--cream);color:var(--text);font-size:20px;line-height:1.8;-webkit-font-smoothing:antialiased;}
+-sup.tm{font-size:.42em;vertical-align:super;letter-spacing:0;font-weight:400;color:var(--faint);}
+-/* NAV */
+-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--cream);border-bottom:.5px solid var(--border);height:66px;display:flex;align-items:center;padding:0 6%;justify-content:space-between;}
+-.nl{display:flex;align-items:baseline;gap:10px;text-decoration:none;}
+-.nl-w{font-family:'EB Garamond',serif;font-size:26px;font-weight:700;color:var(--text);letter-spacing:-.01em;}
+-.nl-w em{color:var(--red);font-style:normal;}
+-.nl-t{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;color:var(--text);letter-spacing:.1em;text-transform:uppercase;}
+-.nm{display:flex;gap:24px;list-style:none;}
+-.nm a{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:400;color:var(--muted);text-decoration:none;letter-spacing:.04em;transition:color .2s;}
+-.nm a:hover,.nm a.on{color:var(--red);}
+-.nc{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;background:var(--red);color:#fff;border:none;border-radius:2px;padding:11px 26px;cursor:pointer;text-decoration:none;transition:background .2s;white-space:nowrap;}
+-.nc:hover{background:var(--red-l);}
+-/* LAYOUT */
+-section{padding:100px 6%;border-bottom:.5px solid var(--border);}
+-.inn{max-width:800px;margin:0 auto;}
+-.inn-w{max-width:1100px;margin:0 auto;}
+-/* TYPE */
+-.lbl{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:12px;}
+-.lbl::before{content:'';display:inline-block;width:24px;height:.5px;background:var(--gold);}
+-.h1{font-size:clamp(32px,4.5vw,54px);font-weight:500;line-height:1.18;letter-spacing:-.018em;color:var(--text);margin-bottom:24px;}
+-.h1 em{font-style:italic;color:var(--red);}
+-.h2{font-size:clamp(26px,3.2vw,40px);font-weight:500;line-height:1.22;letter-spacing:-.014em;color:var(--text);margin-bottom:20px;}
+-.h2 em{font-style:italic;color:var(--red);}
+-.h3{font-size:clamp(20px,2.2vw,26px);font-weight:600;line-height:1.28;color:var(--text);margin-bottom:14px;}
+-.body-xl{font-size:clamp(20px,2.2vw,24px);color:var(--muted);line-height:1.8;max-width:700px;margin-bottom:28px;}
+-.body-lg{font-size:21px;color:var(--muted);line-height:1.8;margin-bottom:22px;}
+-.body-md{font-size:20px;color:var(--muted);line-height:1.75;}
+-.pull{font-size:clamp(22px,2.8vw,32px);font-weight:400;line-height:1.5;color:var(--text);letter-spacing:-.01em;border-left:2px solid var(--gold);padding-left:28px;margin:48px 0;max-width:660px;}
+-.pull em{color:var(--red);font-style:italic;}
+-/* BUTTONS */
+-.btn-p{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;background:var(--red);color:#fff;border:none;border-radius:2px;padding:14px 36px;cursor:pointer;text-decoration:none;transition:background .2s;display:inline-block;letter-spacing:.02em;}
+-.btn-p:hover{background:var(--red-l);}
+-.btn-o{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:400;background:transparent;color:var(--text);border:.5px solid var(--border);border-radius:2px;padding:12px 28px;cursor:pointer;text-decoration:none;transition:border-color .2s;display:inline-block;}
+-.btn-o:hover{border-color:var(--muted);}
+-.tag{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:400;padding:7px 16px;border:.5px solid var(--border);color:var(--muted);background:var(--cream-d);display:inline-block;margin:4px 4px 4px 0;}
+-/* GRIDS */
+-.g2{display:grid;grid-template-columns:1fr 1fr;gap:0;border:.5px solid var(--border);}
+-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:.5px solid var(--border);}
+-.cell{padding:38px 42px;border-right:.5px solid var(--border);border-bottom:.5px solid var(--border);}
+-.cell:nth-child(2n){border-right:none;}
+-.cell-t{font-size:20px;font-weight:600;color:var(--text);margin-bottom:12px;line-height:1.3;}
+-.cell-b{font-size:20px;color:var(--muted);line-height:1.75;}
+-/* FOOTER */
+-footer{padding:64px 6%;background:var(--deep);}
+-.ft{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:36px;}
+-.ft-name{font-family:'EB Garamond',serif;font-size:22px;font-weight:700;color:#FAF7F2;margin-bottom:6px;}
+-.ft-tag{font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#9A8A70;}
+-.ft-info{font-family:'DM Sans',sans-serif;font-size:14px;color:#7A6A58;line-height:1.9;margin-top:14px;}
+-.ft-info a{color:#9A8070;text-decoration:none;}
+-.ft-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap;}
+-.ft-links a{font-family:'DM Sans',sans-serif;font-size:13px;color:#7A6A58;text-decoration:none;transition:color .2s;}
+-.ft-links a:hover{color:#9A8A70;}
+-.ft-legal{font-family:'DM Sans',sans-serif;font-size:12px;color:#5A4A38;line-height:1.85;text-align:right;}
+-/* RESPONSIVE */
+-
+-
+-@media(max-width:780px){
+-  /* Nav */
+-  nav{padding:0 4%;height:60px;}
+-  .nl-t{display:none;}
+-  .nl-w{font-size:22px;}
+-  .nc{font-size:11px;padding:8px 14px;}
+-  .nm{display:none;}
+-  /* Layout */
+-  section{padding:60px 5%;}
+-  .inn,.inn-w{max-width:100%;}
+-  /* Grids → single column */
+-  .g2,.g3,.courses-grid,
+-  .hero-band,.steps,.modes,.sav-bar,
+-  .batch-row,.rg,.stories,
+-  .phil-grid,.team-grid,.founder-grid,
+-  .what-grid,.contact-grid,
+-  .who-grid,.sub-grid,
+-  .one-tier{grid-template-columns:1fr!important;}
+-  /* Remove right borders when stacked */
+-  .cell,.step,.mode,.batch,.story,.rc,.sav,
+-  .pi,.tm,.wh,.sg,.wc,.ot,
+-  .ci-row,.hero-band-l,.hero-band-r{
+-    border-right:none!important;
+-  }
+-  /* Borders between stacked items */
+-  .step,.mode,.rc,.sav,.pi,.tm,.wh,.sg,.wc,.ot{
+-    border-bottom:.5px solid var(--border)!important;
+-  }
+-  /* Last items — remove trailing border */
+-  .step:last-child,.mode:last-child,.rc:nth-child(4),
+-  .pi:last-child,.tm:last-child,.wh:nth-child(4),
+-  .sg:last-child,.wc:nth-child(4),.ot:last-child{
+-    border-bottom:none!important;
+-  }
+-  /* Hero band */
+-  .hero-band-l,.hero-band-r{padding:40px 5%!important;}
+-  /* Fee block */
+-  .fee-block{flex-direction:column;gap:20px;}
+-  /* Pull quote */
+-  .pull{padding-left:16px;font-size:clamp(20px,5vw,26px);}
+-  /* Headings */
+-  .h1{font-size:clamp(28px,7vw,40px);}
+-  .h2{font-size:clamp(24px,6vw,34px);}
+-  /* Stories */
+-  .stories{grid-template-columns:1fr!important;}
+-  .story{border-right:none!important;border-bottom:.5px solid var(--border)!important;padding:32px 0!important;}
+-  .story:first-child{padding-left:0!important;}
+-  .story:last-child{border-bottom:none!important;}
+-  /* Stats */
+-  .stats{grid-template-columns:1fr 1fr!important;}
+-  .stat:nth-child(2){border-right:none!important;}
+-  .stat:nth-child(3){border-top:.5px solid var(--border);}
+-  /* Savings bar */
+-  .sav-bar{grid-template-columns:1fr!important;}
+-  .sav{border-right:none!important;border-bottom:.5px solid var(--border)!important;}
+-  .sav:last-child{border-bottom:none!important;}
+-  /* Calendar table */
+-  .cal-wrap{overflow-x:auto;}
+-  .cal-row{grid-template-columns:80px 1fr!important;flex-wrap:wrap;}
+-  /* Footer */
+-  .ft{flex-direction:column;align-items:flex-start;gap:28px;}
+-  .ft-legal{text-align:left;}
+-  .ft-links{gap:16px;}
+-  /* Inline course grid */
+-  div[style*="grid-template-columns:repeat(3,1fr)"]{
+-    display:block!important;
+-  }
+-  /* Buttons */
+-  .hero-act{flex-direction:column;align-items:flex-start;}
+-  .btn-p,.btn-o,.btn-wa,.btn-ghost{display:block;text-align:center;margin-bottom:8px;}
+-  /* Modes */
+-  .mode:last-child{background:var(--cream-d)!important;}
+-  /* Hero note */
+-  .hero-note p{font-size:clamp(20px,5vw,26px);}
+-  .bridge{font-size:19px!important;}
+-  /* Ref section */
+-  .ref-h{font-size:clamp(22px,5vw,30px);}
+-  .ref-body{font-size:18px;}
+-  /* On/Off for poem unused styles */
+-}
+-@media(max-width:480px){
+-  .nc{display:none;}
+-  .nl-w{font-size:20px;}
+-  nav{height:56px;}
+-  .h1{font-size:clamp(26px,8vw,36px);}
+-  .h2{font-size:clamp(22px,7vw,30px);}
+-  section{padding:48px 4%;}
+-  .stats{grid-template-columns:1fr!important;}
+-  .stat{border-right:none!important;border-bottom:.5px solid var(--border)!important;}
+-  .stat:last-child{border-bottom:none!important;}
+-  .fee-n{font-size:48px!important;}
+-}
+-
+-
+-.cb-wrap{display:inline-block;vertical-align:top;}
+-.btn-cb{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:400;background:transparent;color:var(--text);border:.5px solid var(--border);border-radius:2px;padding:14px 28px;cursor:pointer;transition:border-color .2s;display:inline-block;letter-spacing:.02em;white-space:nowrap;}
+-.btn-cb:hover{border-color:var(--muted);}
+-.cb-form{margin-top:16px;border:.5px solid var(--border);border-radius:2px;background:var(--cream);max-width:440px;}
+-.cb-inner{padding:28px 28px;}
+-.cb-head{font-size:19px;font-weight:600;color:var(--text);margin-bottom:6px;line-height:1.3;}
+-.cb-sub{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--faint);margin-bottom:22px;line-height:1.5;}
+-.cb-field{margin-bottom:16px;}
+-.cb-label{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;display:block;margin-bottom:6px;}
+-.cb-opt{font-family:'DM Sans',sans-serif;font-size:11px;color:var(--faint);margin-left:6px;font-style:italic;font-weight:400;}
+-.cb-input{font-family:'DM Sans',sans-serif;font-size:16px;color:var(--text);width:100%;padding:10px 14px;border:.5px solid var(--border);border-radius:2px;background:var(--cream);outline:none;transition:border-color .2s;}
+-.cb-input:focus{border-color:var(--muted);}
+-.cb-textarea{font-family:'DM Sans',sans-serif;font-size:16px;color:var(--text);width:100%;padding:10px 14px;border:.5px solid var(--border);border-radius:2px;background:var(--cream);outline:none;transition:border-color .2s;resize:vertical;min-height:80px;line-height:1.6;}
+-.cb-textarea:focus{border-color:var(--muted);}
+-.cb-hint{font-family:'DM Sans',sans-serif;font-size:12px;color:var(--faint);margin-top:5px;font-style:italic;}
+-.cb-send{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;background:var(--text);color:#FAF7F2;border:none;border-radius:2px;padding:12px 28px;cursor:pointer;margin-top:8px;transition:opacity .2s;width:100%;}
+-.cb-send:hover{opacity:.85;}
+-.cb-sent{font-family:'DM Sans',sans-serif;font-size:14px;color:var(--gold);margin-top:12px;font-style:italic;}
+-@media(max-width:780px){.cb-wrap{display:block;margin-top:8px;}.btn-cb{display:block;text-align:center;width:100%;}.cb-form{max-width:100%;}}
+-
+-/* ── MOBILE NAV ── */
+-.ham-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;justify-content:center;align-items:center;}
+-.ham-btn span{display:block;width:22px;height:1.5px;background:var(--text);transition:all .25s;}
+-.ham-btn.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+-.ham-btn.open span:nth-child(2){opacity:0;}
+-.ham-btn.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+-.mob-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--cream);border-bottom:.5px solid var(--border);z-index:199;padding:0;}
+-.mob-menu.open{display:block;}
+-.mob-menu a{display:block;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:400;color:var(--muted);text-decoration:none;padding:16px 6%;border-bottom:.5px solid var(--border);transition:background .15s;}
+-.mob-menu a:hover{background:var(--cream-d);}
+-.mob-menu a.on{color:var(--red);}
+-.mob-menu-cta{display:block;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:500;background:var(--red);color:#fff;text-align:center;padding:18px 6%;text-decoration:none;}
+-/* ── STICKY MOBILE CTA ── */
+-.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:198;background:var(--red);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;text-align:center;padding:16px 5%;text-decoration:none;letter-spacing:.02em;border-top:2px solid var(--red-l);}
+-.sticky-cta:hover{background:var(--red-l);}
+-@media(max-width:780px){
+-  .ham-btn{display:flex;}
+-  .nc{display:none;}
+-  .sticky-cta{display:block;}
+-  body{padding-bottom:56px;}
+-}
+-.skip-link{position:absolute;top:-60px;left:6%;background:var(--red);color:#fff;padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;border-radius:0 0 2px 2px;text-decoration:none;z-index:999;transition:top .2s;}.skip-link:focus{top:0;}
+-</style>
++<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=DM+Sans:wght@0,300;0,400;0,500&amp;display=swap" rel="stylesheet"/>
++<link href="assets/css/style.css" rel="stylesheet"/>
+ <script type="application/ld+json">{
+   "@context":"https://schema.org",
+   "@graph":[
+@@ -258,7 +57,7 @@ footer{padding:64px 6%;background:var(--deep);}
+ <body>
+ <style>
+ #hero{padding-top:0;border-bottom:.5px solid var(--border);}
+-.hero-top{padding:100px 6% 0;background:var(--cream-d);}
++.hero-top{padding:100px 6%;background:var(--cream-d);}
+ .eyebrow{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:12px;}
+ .eyebrow::after{content:'';display:inline-block;width:36px;height:.5px;background:var(--gold);}
+ .hero-claim{font-size:clamp(34px,5vw,62px);font-weight:500;line-height:1.12;letter-spacing:-.022em;color:var(--text);margin-bottom:16px;}
+@@ -362,268 +161,213 @@ footer{padding:64px 6%;background:var(--deep);}
+   .step,.mode,.batch,.story,.rc,.sav{border-right:none!important;border-bottom:.5px solid var(--border)!important;}
+   .story:last-child{border-bottom:none!important;}
+   .fee-block{flex-direction:column;gap:20px;}
+-}
++
+ </style>
+-<a href="#main-content" class="skip-link">Skip to main content</a>
++<a class="skip-link" href="#main-content">Skip to main content</a>
+ <nav>
+-  <a href="index.html" class="nl">
+-    <span class="nl-w">Jaa<em>grut</em><sup class="tm">™</sup></span>
+-    <span class="nl-t">We shape the future. We teach.</span>
+-  </a>
+-  <ul class="nm"><li><a href="index.html" class=on>Home</a></li><li><a href="about.html">About</a></li><li><a href="how-we-work.html">How We Work</a></li><li><a href="enrol.html">Enrol</a></li><li><a href="book-diagnostic.html">Book Diagnostic</a></li></ul>
+-  <a href="book-diagnostic.html" class="nc">Book Diagnostic — ₹250</a>
++<a class="nl" href="index.html">
++<span class="nl-w">Jaa<em>grut</em><sup class="tm">™</sup></span>
++<span class="nl-t">We shape the future. We teach.</span>
++</a>
++<ul class="nm"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a class="on" href="how-we-work.html">How We Work</a></li><li><a href="enrol.html">Enrol</a></li><li><a href="book-diagnostic.html">Book Diagnostic</a></li><li><a href="courses.html">Courses</a></li><li><a href="faq.html">FAQs</a></li></ul>
++<a class="nc" href="book-diagnostic.html">Book Diagnostic — ₹250</a>
+ </nav>
+-<div class="mob-menu" id="mob-nav">
+-  <a href="index.html" class="on">Home</a>
+-  <a href="about.html">About</a>
+-  <a href="how-we-work.html">How We Work</a>
+-  <a href="enrol.html">Enrol</a>
+-  <a href="book-diagnostic.html">Book Diagnostic</a>
+-  <a href="grades-6-9.html">Grades 6–9</a>
+-  <a href="cbse-10.html">10th CBSE</a>
+-  <a href="icse-10.html">10th ICSE</a>
+-  <a href="class-11-12.html">Classes 11–12</a>
+-  <a href="jee-neet.html">JEE &amp; NEET</a>
+-  <a href="kcet.html">KCET</a>
+-  <a href="book-diagnostic.html" class="mob-menu-cta">Schedule a Diagnostic Test &rarr;</a>
+-</div>
+ 
+ <section id="main-content">
+-  <div class="hero-top">
+-    <div class="inn">
+-      <div class="eyebrow">Grades 6&ndash;12 &middot; Since 2007 &middot; Online &middot; Crafted with pride in Bengaluru.</div>
+-      <h1 class="hero-claim">Online tutoring built around<br>your child.</h1>
+-      <p class="hero-sub">Live online classes &middot; CBSE &middot; ICSE &middot; JEE &middot; NEET &middot; KCET</p>
+-    </div>
+-  </div>
+-  <div class="hero-band">
+-    <div class="hero-band-l">
+-      <div class="hero-note">
+-        <p>Since 2007, we have taught more than two thousand children. Carefully. Honestly. One child at a time.</p>
+-        <p>We care deeply about how each child learns &mdash; and who they become along the way.</p>
+-        <p class="sub">That is not something we say because it sounds good. It is the reason Jaagrut exists.</p>
+-      </div>
+-      <div class="diag-why"><h3 class="diag-why-head">The Jaagrut journey begins with a Math diagnostic test. Why only Math?</h3><p class="diag-why-body">Mathematics is built like a wall — each concept a brick that supports the next. A gap in Grade 7 quietly undermines Grade 10. In science, we begin with the fundamentals regardless — so a fresh start is already built in. Fixing the Mathematics gaps first unlocks everything else.</p></div>
+-    </div>
+-    <div class="hero-band-r">
+-      <p class="bridge">Mathematics is built like a wall &mdash; each concept a brick that supports the next. A gap in Grade 7 algebra quietly undermines Grade 10 trigonometry. In science, we begin with the fundamentals regardless &mdash; so a fresh start is already built in. Before anything else, we assess exactly where the gaps are. That is where every Jaagrut journey begins.</p>
+-      <div class="hero-act">
+-        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start;"><a href="book-diagnostic.html" class="btn-p">Schedule a Diagnostic Test &rarr;</a>
++<div class="hero-top">
++<div class="inn">
++<div class="eyebrow">Grades 6–12 · Since 2007 · Online · Crafted with pride in Bengaluru.</div>
++<h1 class="hero-claim">Online tutoring built around<br/>your child.</h1>
++<p class="hero-sub">Live online classes · CBSE · ICSE · JEE · NEET · KCET</p>
++</div>
++</div>
++<div class="hero-band">
++<div class="hero-band-l">
++<div class="hero-note">
++<p>Since 2007, we have taught more than two thousand children. Carefully. Honestly. One child at a time.</p>
++<p>We care deeply about how each child learns — and who they become along the way.</p>
++<p class="sub">That is not something we say because it sounds good. It is the reason Jaagrut exists.</p>
++</div>
++<div class="diag-why"><h3 class="diag-why-head">The Jaagrut journey begins with a Math diagnostic test. Why only Math?</h3><p class="diag-why-body">Mathematics is built like a wall — each concept a brick that supports the next. A gap in Grade 7 quietly undermines Grade 10. In science, we begin with the fundamentals regardless — so a fresh start is already built in. Fixing the Mathematics gaps first unlocks everything else.</p></div>
++</div>
++<div class="hero-band-r">
++<p class="bridge">Mathematics is built like a wall — each concept a brick that supports the next. A gap in Grade 7 algebra quietly undermines Grade 10 trigonometry. In science, we begin with the fundamentals regardless — so a fresh start is already built in. Before anything else, we assess exactly where the gaps are. That is where every Jaagrut journey begins.</p>
++<div class="hero-act">
++<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start;"><a class="btn-p" href="book-diagnostic.html">Schedule a Diagnostic Test →</a>
+ <div class="cb-wrap">
+-  <button class="btn-cb" onclick="toggleCb('cb-index1')">Have us call you? &rarr;</button>
+-  <div class="cb-form" id="cb-index1" style="display:none;">
+-    <div class="cb-inner">
+-      <div class="cb-head">We will call you back.</div>
+-      <div class="cb-sub">Leave your details and we will reach out to you.</div>
+-      <div class="cb-field">
+-        <label class="cb-label" for="cb-n-index1">Your name</label>
+-        <input class="cb-input" type="text" id="cb-n-index1" placeholder="Your name">
+-      </div>
+-      <div class="cb-field">
+-        <label class="cb-label" for="cb-p-index1">Phone with country code</label>
+-        <input class="cb-input" type="tel" id="cb-p-index1" placeholder="+91 98765 43210">
+-      </div>
+-      <div class="cb-field">
+-        <label class="cb-label" for="cb-e-index1">Email address</label>
+-        <input class="cb-input" type="email" id="cb-e-index1" aria-describedby="cb-e-index1-hint" placeholder="your@email.com">
+-        <div class="cb-hint" id="cb-hint-1">In case we miss your call, we will reach you here.</div>
+-      </div>
+-      <div class="cb-field">
+-        <label class="cb-label" for="cb-m-index1">Your message <span class="cb-opt">optional</span></label>
+-        <textarea class="cb-textarea" id="cb-m-index1" placeholder="Tell us about your child — grade, board, subject, any specific concern..."></textarea>
+-      </div>
+-      <button class="cb-send" onclick="sendCb('index1','Homepage')">Send on WhatsApp &rarr;</button>
+-      <div class="cb-sent" id="cb-done-index1" style="display:none;">Thank you. We will call you shortly.</div>
+-    </div>
+-  </div>
++<a class="btn-cb" onclick="toggleCb('cb-index1')">Have us call you? →</a>
++<div class="cb-form" id="cb-index1" style="display:none;">
++<div class="cb-inner">
++<div class="cb-head">We will call you back.</div>
++<div class="cb-sub">Leave your details and we will reach out to you.</div>
++<div class="cb-field">
++<label class="cb-label" for="cb-n-index1">Your name</label>
++<input class="cb-input" id="cb-n-index1" placeholder="Your name" type="text"/>
++</div>
++<div class="cb-field">
++<label class="cb-label" for="cb-p-index1">Phone with country code</label>
++<input class="cb-input" id="cb-p-index1" placeholder="+91 98765 43210" type="tel"/>
++</div>
++<div class="cb-field">
++<label class="cb-label" for="cb-e-index1">Email address</label>
++<input aria-describedby="cb-e-index1-hint" class="cb-input" id="cb-e-index1" placeholder="your@email.com" type="email"/>
++<div class="cb-hint" id="cb-hint-1">In case we miss your call, we will reach you here.</div>
++</div>
++<div class="cb-field">
++<label class="cb-label" for="cb-m-index1">Your message <span class="cb-opt">optional</span></label>
++<textarea class="cb-textarea" id="cb-m-index1" placeholder="Tell us about your child — grade, board, subject, any specific concern..."></textarea>
++</div>
++<button class="cb-send" onclick="sendCb('index1','Homepage')">Send on WhatsApp →</button>
++<div class="cb-sent" id="cb-done-index1" style="display:none;">Thank you. We will call you shortly.</div>
++</div>
++</div>
+ </div></div></div>
+-      </div>
+-      <p class="hero-note2">&nbsp;&#8377;250 &middot; Adjusted if you join &middot; Written report and a short discussion with one of our experienced teachers</p>
+-    </div>
+-  </div>
+-  <div class="stats">
+-    <div class="stat"><div class="stat-n">17+</div><div class="stat-l">Years of teaching</div></div>
+-    <div class="stat"><div class="stat-n">2,000+</div><div class="stat-l">Students shaped</div></div>
+-    <div class="stat"><div class="stat-n">4.8</div><div class="stat-l">Google rating</div></div>
+-  </div>
++</div>
++<p class="hero-note2"> ₹250 · Adjusted if you join · Written report and a short discussion with one of our experienced teachers</p>
++</div>
++<div class="stats">
++<div class="stat"><div class="stat-n">17+</div><div class="stat-l">Years of teaching</div></div>
++<div class="stat"><div class="stat-n">2,000+</div><div class="stat-l">Students shaped</div></div>
++<div class="stat"><div class="stat-n">4.8</div><div class="stat-l">Google rating</div></div>
++</div>
+ </section>
+-
+ <section style="background:var(--cream-d);">
+-  <div class="inn-w">
+-    <div class="lbl">How we work</div>
+-    <h2 class="h2">Four things we do. In this order.</h2>
+-    <div class="steps">
+-      <div class="step"><div class="sn">01</div><div class="st">We begin by knowing your child</div><div class="sb">Before a single lesson, your child sits a diagnostic assessment. Not to judge &mdash; to understand. Where are the gaps? What comes with ease? What is being held back by something not yet fully mastered? The honest answer to these questions is where we begin.</div></div>
+-      <div class="step"><div class="sn">02</div><div class="st">We teach &mdash; concept first</div><div class="sb">Our teaching team works through each learning objective with care. No moving on until understanding is confirmed. Every session has a purpose. We consider ourselves students of thinking &mdash; and we invite every child to examine the power of thinking and, in time, to surpass us in that skill.</div></div>
+-      <div class="step"><div class="sn">03</div><div class="st">A separate team tests &mdash; honestly</div><div class="sb">A different team of teachers &mdash; who have not taught your child &mdash; sets the assessments, marks the work, and reports the scores. We call them the Q-Team. They have no prior relationship with your child. The score they report is the score your child earned.</div></div>
+-      <div class="step"><div class="sn">04</div><div class="st">We stay &mdash; and keep you informed</div><div class="sb">Every 30 days, you receive a written update &mdash; a document on record, not a phone call that disappears. Progress against the delivery calendar. When adjustments are needed, we write them down and send them to you.</div></div>
+-    </div>
+-  </div>
++<div class="inn-w">
++<div class="lbl">How we work</div>
++<h2 class="h2">Four things we do. In this order.</h2>
++<div class="steps">
++<div class="step"><div class="sn">01</div><div class="st">We begin by knowing your child</div><div class="sb">Before a single lesson, your child sits a diagnostic assessment. Not to judge — to understand. Where are the gaps? What comes with ease? What is being held back by something not yet fully mastered? The honest answer to these questions is where we begin.</div></div>
++<div class="step"><div class="sn">02</div><div class="st">We teach — concept first</div><div class="sb">Our teaching team works through each learning objective with care. No moving on until understanding is confirmed. Every session has a purpose. We consider ourselves students of thinking — and we invite every child to examine the power of thinking and, in time, to surpass us in that skill.</div></div>
++<div class="step"><div class="sn">03</div><div class="st">A separate team tests — honestly</div><div class="sb">A different team of teachers — who have not taught your child — sets the assessments, marks the work, and reports the scores. We call them the Q-Team. They have no prior relationship with your child. The score they report is the score your child earned.</div></div>
++<div class="step"><div class="sn">04</div><div class="st">We stay — and keep you informed</div><div class="sb">Every 30 days, you receive a written update — a document on record, not a phone call that disappears. Progress against the delivery calendar. When adjustments are needed, we write them down and send them to you.</div></div>
++</div>
++</div>
+ </section>
+-
+ <section>
+-  <div class="inn">
+-    <div class="lbl">The first step</div>
+-    <h2 class="h2">The Diagnostic Assessment.<br><em>Where every journey begins.</em></h2>
+-    <p class="body-xl">Before we make any recommendation &mdash; before we place your child in a batch, before we discuss fees &mdash; we need to understand where your child actually stands.</p>
+-    <div class="fee-block">
+-      <div><div class="fee-lbl">Assessment fee</div><div class="fee-n">&#8377;250</div></div>
+-      <div><div class="fee-lbl">What you receive</div><div class="fee-desc">A diagnostic test &mdash; recommended duration 90 minutes, with up to 120 minutes available &mdash; followed by a <strong>detailed written report</strong> covering gap analysis, strength mapping and a clear recommendation. Followed by a short discussion with one of our experienced teachers. The fee is <strong>adjusted against your first payment</strong> if you join.</div></div>
+-    </div>
+-    <div class="lbl">Where the report places your child</div>
+-    <div class="batch-row">
+-      <div class="batch reg"><div class="batch-sc">Regular Batch</div><div class="batch-nm">Build from the ground up</div><div class="batch-ds">A steady pace. Concepts built carefully from prerequisites upward. This is where most children find their footing and begin to surprise themselves.</div></div>
+-      <div class="batch fst"><div class="batch-sc">Fast Batch</div><div class="batch-nm">Go deep, go further</div><div class="batch-ds">A strong foundation already in place. A higher pace. We move through familiar ground and dig into the gaps that are genuinely holding the student back.</div></div>
+-    </div>
+-    <p class="diag-note">1-1 is available alongside both batches &mdash; for any student, for any reason. Some families prefer individual attention, and that is a worthwhile choice.</p>
+-  </div>
++<div class="inn">
++<div class="lbl">The first step</div>
++<h2 class="h2">The Diagnostic Assessment.<br/><em>Where every journey begins.</em></h2>
++<p class="body-xl">Before we make any recommendation — before we place your child in a batch, before we discuss fees — we need to understand where your child actually stands.</p>
++<div class="fee-block">
++<div><div class="fee-lbl">Assessment fee</div><div class="fee-n">₹250</div></div>
++<div><div class="fee-lbl">What you receive</div><div class="fee-desc">A diagnostic test — recommended duration 90 minutes, with up to 120 minutes available — followed by a <strong>detailed written report</strong> covering gap analysis, strength mapping and a clear recommendation. Followed by a short discussion with one of our experienced teachers. The fee is <strong>adjusted against your first payment</strong> if you join.</div></div>
++</div>
++<div class="lbl">Where the report places your child</div>
++<div class="batch-row">
++<div class="batch reg"><div class="batch-sc">Regular Batch</div><div class="batch-nm">Build from the ground up</div><div class="batch-ds">A steady pace. Concepts built carefully from prerequisites upward. This is where most children find their footing and begin to surprise themselves.</div></div>
++<div class="batch fst"><div class="batch-sc">Fast Batch</div><div class="batch-nm">Go deep, go further</div><div class="batch-ds">A strong foundation already in place. A higher pace. We move through familiar ground and dig into the gaps that are genuinely holding the student back.</div></div>
++</div>
++<p class="diag-note">1-1 is available alongside both batches — for any student, for any reason. Some families prefer individual attention, and that is a worthwhile choice.</p>
++</div>
+ </section>
+-
+ <section style="background:var(--cream-d);">
+-  <div class="inn-w">
+-    <div class="lbl">How to join</div>
+-    <h2 class="h2">Three ways to enrol.<br><em>One honest fee structure.</em></h2>
+-    <p class="body-xl">We know it takes time to trust a new school with your child. Start with a month, or a quarter &mdash; give us the opportunity to show you what we do. Once you feel sure, switching to annual is simple and saves you 15%. The refund policy is fair, clear, and written down.</p>
+-    <div class="modes">
+-      <div class="mode"><div class="mode-num">Mode 01 &middot; Monthly</div><div class="mode-name">Pay monthly</div><span class="mode-badge b-full">Full price</span><div class="mode-body">Maximum flexibility. Pay one month at a time. No long-term commitment required.</div><div class="mode-sw">Switch to annual within the first 3 months &mdash; save 10% on the remaining balance.</div></div>
+-      <div class="mode"><div class="mode-num">Mode 02 &middot; Quarterly</div><div class="mode-name">Pay quarterly</div><span class="mode-badge b-full">Full price</span><div class="mode-body">One payment for three months. Enough commitment to settle in, enough flexibility before the year.</div><div class="mode-sw">Switch to annual within the first 6 months &mdash; save 10% on the remaining balance.</div></div>
+-      <div class="mode"><div class="mode-num">Mode 03 &middot; Annual</div><div class="mode-name">Pay annually</div><span class="mode-badge b-best">Save 15%</span><div class="mode-body">Pay once for the full year. Our lowest fee. The same refund rights as every other mode.</div><div class="mode-sw">Full refund within 15 days of classes commencing. Proportionate refund after. Paying annually does not reduce your refund rights.</div></div>
+-    </div>
+-    <div class="sav-bar">
+-      <div class="sav"><div class="sav-l">Monthly or Quarterly</div><div class="sav-v">Full price</div></div>
+-      <div class="sav"><div class="sav-l">Switch to Annual mid-way</div><div class="sav-v">Save 10% on balance</div></div>
+-      <div class="sav"><div class="sav-l">Annual from day one</div><div class="sav-v">Save 15%</div></div>
+-    </div>
+-  </div>
++<div class="inn-w">
++<div class="lbl">How to join</div>
++<h2 class="h2">Three ways to enrol.<br/><em>One honest fee structure.</em></h2>
++<p class="body-xl">We know it takes time to trust a new school with your child. Start with a month, or a quarter — give us the opportunity to show you what we do. Once you feel sure, switching to annual is simple and saves you 15%. The refund policy is fair, clear, and written down.</p>
++<div class="modes">
++<div class="mode"><div class="mode-num">Mode 01 · Monthly</div><div class="mode-name">Pay monthly</div><span class="mode-badge b-full">Full price</span><div class="mode-body">Maximum flexibility. Pay one month at a time. No long-term commitment required.</div><div class="mode-sw">Switch to annual within the first 3 months — save 10% on the remaining balance.</div></div>
++<div class="mode"><div class="mode-num">Mode 02 · Quarterly</div><div class="mode-name">Pay quarterly</div><span class="mode-badge b-full">Full price</span><div class="mode-body">One payment for three months. Enough commitment to settle in, enough flexibility before the year.</div><div class="mode-sw">Switch to annual within the first 6 months — save 10% on the remaining balance.</div></div>
++<div class="mode"><div class="mode-num">Mode 03 · Annual</div><div class="mode-name">Pay annually</div><span class="mode-badge b-best">Save 15%</span><div class="mode-body">Pay once for the full year. Our lowest fee. The same refund rights as every other mode.</div><div class="mode-sw">Full refund within 15 days of classes commencing. Proportionate refund after. Paying annually does not reduce your refund rights.</div></div>
++</div>
++<div class="sav-bar">
++<div class="sav"><div class="sav-l">Monthly or Quarterly</div><div class="sav-v">Full price</div></div>
++<div class="sav"><div class="sav-l">Switch to Annual mid-way</div><div class="sav-v">Save 10% on balance</div></div>
++<div class="sav"><div class="sav-l">Annual from day one</div><div class="sav-v">Save 15%</div></div>
++</div>
++</div>
+ </section>
+-
+ <section>
+-  <div class="inn">
+-    <div class="lbl">Refund policy</div>
+-    <h2 class="h2">Written down. Not just promised.</h2>
+-    <div class="rg">
+-      <div class="rc hl"><div class="rc-h">Within 15 days of classes commencing</div><div class="rc-b">Full refund. No deductions. The 15-day window begins from the date classes commence.</div></div>
+-      <div class="rc"><div class="rc-h">After 15 days</div><div class="rc-b">Refund proportionate to the syllabus portions not yet tested by the Q-Team. Tested is delivered. Untested is returned.</div></div>
+-      <div class="rc"><div class="rc-h">Diagnostic fee &mdash; &#8377;250</div><div class="rc-b">Non-refundable. Adjusted against your first tuition payment if you join. You do not pay it twice.</div></div>
+-      <div class="rc"><div class="rc-h">Switching to Annual</div><div class="rc-b">Top up to the annual fee at the 10% discounted rate. Forward-looking, not retroactive.</div></div>
+-    </div>
+-    <div class="pledge"><strong>Worth saying plainly.</strong> Paying for a year does not reduce your refund rights. We earn your trust through what we deliver &mdash; regardless of how you paid.</div>
+-  </div>
++<div class="inn">
++<div class="lbl">Refund policy</div>
++<h2 class="h2">Written down. Not just promised.</h2>
++<div class="rg">
++<div class="rc hl"><div class="rc-h">Within 15 days of classes commencing</div><div class="rc-b">Full refund. No deductions. The 15-day window begins from the date classes commence.</div></div>
++<div class="rc"><div class="rc-h">After 15 days</div><div class="rc-b">Refund proportionate to the syllabus portions not yet tested by the Q-Team. Tested is delivered. Untested is returned.</div></div>
++<div class="rc"><div class="rc-h">Diagnostic fee — ₹250</div><div class="rc-b">Non-refundable. Adjusted against your first tuition payment if you join. You do not pay it twice.</div></div>
++<div class="rc"><div class="rc-h">Switching to Annual</div><div class="rc-b">Top up to the annual fee at the 10% discounted rate. Forward-looking, not retroactive.</div></div>
++</div>
++<div class="pledge"><strong>Worth saying plainly.</strong> Paying for a year does not reduce your refund rights. We earn your trust through what we deliver — regardless of how you paid.</div>
++</div>
+ </section>
+-
+ <section style="background:var(--cream-d);">
+-  <div class="inn-w">
+-    <div class="lbl">Three families. Three honest accounts.</div>
+-    <h2 class="h2">Not testimonials.<br><em>Letters.</em></h2>
+-    <div class="stories">
+-      <div class="story"><div class="story-lbl">On the love of teaching</div><div class="story-q">There are teachers who teach and those that love imparting knowledge and are in it for love of teaching. Jaagrut ranks on top of that list. They are committed to bringing the best out of every child.</div><div class="story-who">Reenu Rai</div></div>
+-      <div class="story"><div class="story-lbl">From Sydney, Australia</div><div class="story-q">Jaagrut institute is well organised for kids. They catered to teach the Australian curriculum and we are grateful to Jyothi ma&rsquo;am and Gaurav sir for their support. &mdash; Kavitha/Sriya, from Sydney.</div><div class="story-who">Kavitha Satish</div></div>
+-      <div class="story"><div class="story-lbl">Three years together</div><div class="story-q">Gratitude is one word I feel for this institution. Conscious, giving, passionate and full of love for the students and the art of teaching. My daughter has been learning with them for 3 years and we know it would not have been the same without meeting them.</div><div class="story-who">Shilpasrivatsa Indiresha</div></div>
+-    </div>
+-    <div style="margin-top:36px;text-align:center;">
+-      <a href="https://maps.app.goo.gl/KBsQXKk3epQgQAV57" class="btn-o" target="_blank" rel="noopener">Read all reviews on Google &rarr;</a>
+-    </div>
+-  </div>
++<div class="inn-w">
++<div class="lbl">Three families. Three honest accounts.</div>
++<h2 class="h2">Not testimonials.<br/><em>Letters.</em></h2>
++<div class="stories">
++<div class="story"><div class="story-lbl">On the love of teaching</div><div class="story-q">There are teachers who teach and those that love imparting knowledge and are in it for love of teaching. Jaagrut ranks on top of that list. They are committed to bringing the best out of every child.</div><div class="story-who">Reenu Rai</div></div>
++<div class="story"><div class="story-lbl">From Sydney, Australia</div><div class="story-q">Jaagrut institute is well organised for kids. They catered to teach the Australian curriculum and we are grateful to Jyothi ma’am and Gaurav sir for their support. — Kavitha/Sriya, from Sydney.</div><div class="story-who">Kavitha Satish</div></div>
++<div class="story"><div class="story-lbl">Three years together</div><div class="story-q">Gratitude is one word I feel for this institution. Conscious, giving, passionate and full of love for the students and the art of teaching. My daughter has been learning with them for 3 years and we know it would not have been the same without meeting them.</div><div class="story-who">Shilpasrivatsa Indiresha</div></div>
++</div>
++<div style="margin-top:36px;text-align:center;">
++<a class="btn-o" href="https://maps.app.goo.gl/KBsQXKk3epQgQAV57" rel="noopener" target="_blank">Read all reviews on Google →</a>
++</div>
++</div>
+ </section>
+-
+ <section style="background:var(--cream-d);">
+-  <div class="inn-w">
+-    <div class="lbl">Our courses</div>
+-    <h2 class="h2">Mathematics &amp; Science.<br><em>Every grade. Every board.</em></h2>
+-    <p class="body-xl" style="margin-bottom:40px;">From Grade 6 foundations through to JEE, NEET and KCET. Each course begins with the diagnostic. Everything follows from there.</p>
+-    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;">
+-      <span class="tag">Grades 6&ndash;9</span><span class="tag">10th CBSE</span><span class="tag">10th ICSE</span><span class="tag">Classes 11&ndash;12</span><span class="tag">JEE &amp; NEET</span><span class="tag">KCET</span>
+-    </div>
+-    <a href="courses.html" class="btn-p">See all courses &rarr;</a>
+-  </div>
++<div class="inn-w">
++<div class="lbl">Our courses</div>
++<h2 class="h2">Mathematics &amp; Science.<br/><em>Every grade. Every board.</em></h2>
++<p class="body-xl" style="margin-bottom:40px;">From Grade 6 foundations through to JEE, NEET and KCET. Each course begins with the diagnostic. Everything follows from there.</p>
++<div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;">
++<span class="tag">Grades 6–9</span><span class="tag">10th CBSE</span><span class="tag">10th ICSE</span><span class="tag">Classes 11–12</span><span class="tag">JEE &amp; NEET</span><span class="tag">KCET</span>
++</div>
++<a class="btn-p" href="courses.html">See all courses →</a>
++</div>
+ </section>
+-
+ <section>
+-  <div class="inn">
+-    <div class="lbl">Who we are for</div>
+-    <h2 class="h2">Not every family.<br>The right family.</h2>
+-    <p class="serve-body">Jaagrut is for <em>parents who do not follow the crowd, and who are intent on doing the best for their children.</em> Parents who want to understand what is being taught, how it is being tested, and whether it is working.</p>
+-    <div style="display:flex;flex-wrap:wrap;gap:8px;">
+-      <span class="tag">Grades 6&ndash;12</span><span class="tag">CBSE</span><span class="tag">ICSE</span><span class="tag">JEE</span><span class="tag">NEET</span><span class="tag">KCET</span><span class="tag">IGCSE</span><span class="tag">A Levels</span><span class="tag">Australian Curriculum</span><span class="tag">Online &middot; Live</span><span class="tag">Small Batches</span><span class="tag">1-1 Available</span>
+-    </div>
+-  </div>
++<div class="inn">
++<div class="lbl">Who we are for</div>
++<h2 class="h2">Not every family.<br/>The right family.</h2>
++<p class="serve-body">Jaagrut is for <em>parents who do not follow the crowd, and who are intent on doing the best for their children.</em> Parents who want to understand what is being taught, how it is being tested, and whether it is working.</p>
++<div style="display:flex;flex-wrap:wrap;gap:8px;">
++<span class="tag">Grades 6–12</span><span class="tag">CBSE</span><span class="tag">ICSE</span><span class="tag">JEE</span><span class="tag">NEET</span><span class="tag">KCET</span><span class="tag">IGCSE</span><span class="tag">A Levels</span><span class="tag">Australian Curriculum</span><span class="tag">Online · Live</span><span class="tag">Small Batches</span><span class="tag">1-1 Available</span>
++</div>
++</div>
+ </section>
+-
+ <section style="background:var(--cream-d);">
+-  <div class="inn">
+-    <div class="lbl">About Jaagrut</div>
+-    <h2 class="h2">Seventeen years.<br><em>One conviction.</em></h2>
+-    <p class="body-xl">Jaagrut was founded in 2007 by Gaurav Bajpeyee with one belief — that every child deserves a teacher who begins by understanding them. What started in Bengaluru now serves students in Australia, the UK, the USA, Singapore, Dubai and beyond. The batches remain small. The child remains the starting point.</p>
+-    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;">
+-      <a href="about.html" class="btn-p">Read our story &rarr;</a>
+-      <a href="how-we-work.html" class="btn-o">How we work</a>
+-    </div>
+-  </div>
++<div class="inn">
++<div class="lbl">About Jaagrut</div>
++<h2 class="h2">Seventeen years.<br/><em>One conviction.</em></h2>
++<p class="body-xl">Jaagrut was founded in 2007 by Gaurav Bajpeyee with one belief — that every child deserves a teacher who begins by understanding them. What started in Bengaluru now serves students in Australia, the UK, the USA, Singapore, Dubai and beyond. The batches remain small. The child remains the starting point.</p>
++<div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;">
++<a class="btn-p" href="about.html">Read our story →</a>
++<a class="btn-o" href="how-we-work.html">How we work</a>
++</div>
++</div>
+ </section>
+-
+ <section>
+-  <div class="inn">
+-    <div class="lbl">Questions parents ask</div>
+-    <h2 class="h2">Have a question?<br><em>We have answers.</em></h2>
+-    <p class="body-xl" style="margin-bottom:36px;">From how the diagnostic works to what equipment your child needs &mdash; answered plainly.</p>
+-    <a href="faq.html" class="btn-o">Read all FAQs &rarr;</a>
+-  </div>
++<div class="inn">
++<div class="lbl">Questions parents ask</div>
++<h2 class="h2">Have a question?<br/><em>We have answers.</em></h2>
++<p class="body-xl" style="margin-bottom:36px;">From how the diagnostic works to what equipment your child needs — answered plainly.</p>
++<a class="btn-o" href="faq.html">Read all FAQs →</a>
++</div>
+ </section>
+-
+ <section id="referral">
+-  <div class="inn">
+-    <div class="ref-lbl">For Jaagrut families</div>
+-    <h2 class="ref-h">If Jaagrut has served your child well &mdash; would you share this with one family?</h2>
+-    <p class="ref-body">Jaagrut has grown through the trust of families who have seen what we do and chosen to share it. If you know a parent who is looking carefully &mdash; who would rather hear an honest answer than a comfortable one &mdash; a single message from you carries more weight than we could earn on our own.</p>
+-    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+-      <a href="https://wa.me/?text=I%20wanted%20to%20share%20Jaagrut%20with%20you%20%E2%80%94%20an%20online%20tutoring%20school%20built%20around%20the%20child%2C%20not%20the%20syllabus.%20They%20start%20with%20a%20diagnostic%20assessment%20(%E2%82%B9250)%20and%20their%20honesty%20is%20unlike%20anything%20I%20have%20seen.%20www.jaagrut.com" class="btn-wa" target="_blank" rel="noopener">Share on WhatsApp</a>
+-      <a href="book-diagnostic.html" class="btn-ghost">Book a diagnostic for your child &rarr;</a>
+-    </div>
+-  </div>
++<div class="inn">
++<div class="ref-lbl">For Jaagrut families</div>
++<h2 class="ref-h">If Jaagrut has served your child well — would you share this with one family?</h2>
++<p class="ref-body">Jaagrut has grown through the trust of families who have seen what we do and chosen to share it. If you know a parent who is looking carefully — who would rather hear an honest answer than a comfortable one — a single message from you carries more weight than we could earn on our own.</p>
++<div style="display:flex;gap:14px;flex-wrap:wrap;">
++<a class="btn-wa" href="https://wa.me/?text=I%20wanted%20to%20share%20Jaagrut%20with%20you%20%E2%80%94%20an%20online%20tutoring%20school%20built%20around%20the%20child%2C%20not%20the%20syllabus.%20They%20start%20with%20a%20diagnostic%20assessment%20(%E2%82%B9250)%20and%20their%20honesty%20is%20unlike%20anything%20I%20have%20seen.%20www.jaagrut.com" rel="noopener" target="_blank">Share on WhatsApp</a>
++<a class="btn-ghost" href="book-diagnostic.html">Book a diagnostic for your child →</a>
++</div>
++</div>
+ </section>
+ <footer>
+-  <div class="ft">
+-    <div>
+-      <div class="ft-name">Jaagrut<sup class="tm" style="color:#6B5A48;">™</sup></div>
+-      <div class="ft-tag">We shape the future. We teach.</div>
+-      <div class="ft-info">
+-        Jaagrut Educational Services Pvt Ltd<br>
+-        28 RBI Colony, Anandnagar, Bengaluru 560024<br>
+-        <a href="tel:+919620000535">+91 96200 00535</a> &nbsp;&middot;&nbsp;
+-        <a href="/cdn-cgi/l/email-protection#78191c151116381219191f0a0d0c561b1715"><span class="__cf_email__" data-cfemail="a9c8cdc4c0c7e9c3c8c8cedbdcdd87cac6c4">[email&#160;protected]</span></a>
+-      </div>
+-    </div>
+-    <ul class="ft-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="how-we-work.html">How We Work</a></li><li><a href="enrol.html">Enrol</a></li><li><a href="book-diagnostic.html">Book Diagnostic</a></li><li><a href="grades-6-9.html">Grades 6–9</a></li><li><a href="cbse-10.html">10th CBSE</a></li><li><a href="icse-10.html">10th ICSE</a></li><li><a href="class-11-12.html">11th–12th</a></li><li><a href="jee-neet.html">JEE & NEET</a></li><li><a href="kcet.html">KCET</a></li></ul>
+-    <div class="ft-legal
+-<script>
+-function toggleCb(id){var el=document.getElementById(id);el.style.display=el.style.display==='none'?'block':'none';}
+-function sendCb(id,page){
+-  var name=document.getElementById('cb-n-'+id).value.trim();
+-  var phone=document.getElementById('cb-p-'+id).value.trim();
+-  var email=document.getElementById('cb-e-'+id).value.trim();
+-  var msg=document.getElementById('cb-m-'+id).value.trim();
+-  if(!name||!phone){alert('Please enter your name and phone number.');return;}
+-  var txt='Callback request — Jaagrut%0A---%0AName: '+encodeURIComponent(name)+'%0APhone: '+encodeURIComponent(phone)+'%0AEmail: '+encodeURIComponent(email||'Not provided')+'%0AMessage: '+encodeURIComponent(msg||'None')+'%0APage: '+encodeURIComponent(page);
+-  window.open('https://wa.me/919620000535?text='+txt,'_blank');
+-  document.getElementById('cb-done-'+id).style.display='block';
+-}
+-</script>
+-
+-<script>
+-(function(){
+-  var btn=document.getElementById('ham');
+-  var menu=document.getElementById('mob-nav');
+-  if(!btn||!menu)return;
+-  btn.addEventListener('click',function(){
+-    btn.classList.toggle('open');
+-    menu.classList.toggle('open');
+-  });
+-  menu.querySelectorAll('a').forEach(function(a){
+-    a.addEventListener('click',function(){
+-      btn.classList.remove('open');
+-      menu.classList.remove('open');
+-    });
+-  });
+-})();
+-</script>
+-</body></html>
+\ No newline at end of file
++<div class="ft">
++<div>
++<div class="ft-name">Jaagrut<sup class="tm" style="color:#6B5A48;">™</sup></div>
++<div class="ft-tag">We shape the future. We teach.</div>
++<div class="ft-info">
++        Jaagrut Educational Services Pvt Ltd<br/>
++        28 RBI Colony, Anandnagar, Bengaluru 560024<br/>
++<a href="tel:+919620000535">+91 96200 00535</a>  · 
++        <a href="/cdn-cgi/l/email-protection#78191c151116381219191f0a0d0c561b1715"><span class="__cf_email__" data-cfemail="a9c8cdc4c0c7e9c3c8c8cedbdcdd87cac6c4">[email protected]</span></a>
++</div>
++</div>
++<ul class="ft-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="how-we-work.html">How We Work</a></li><li><a href="enrol.html">Enrol</a></li><li><a href="book-diagnostic.html">Book Diagnostic</a></li><li><a href="grades-6-9.html">Grades 6–9</a></li><li><a href="cbse-10.html">10th CBSE</a></li><li><a href="icse-10.html">10th ICSE</a></li><li><a href="class-11-12.html">11th–12th</a></li><li><a href="jee-neet.html">JEE &amp; NEET</a></li><li><a href="kcet.html">KCET</a></li></ul>
++<div class="ft-legal">© 2025 Jaagrut Educational Services Pvt Ltd<br/>Google Rating: 4.8 · Est. 2007</div>
++</div>
++</footer><script src="assets/js/main.js"></script></body></html>
+\ No newline at end of file
