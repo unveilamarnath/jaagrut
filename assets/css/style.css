@@ -164,6 +164,11 @@ nav {
 }
 
 /* LAYOUT */
+
+#main-content{
+  padding: 166px 6% 100px;
+}
+
 section {
   padding: 100px 6%;
   border-bottom: .5px solid var(--border);

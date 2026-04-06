@@ -1,3 +1,6 @@
+const year = new Date().getFullYear();
+document.getElementById("year").textContent = year;
+
 function toggleCb(id){
   var el=document.getElementById(id);
   if(el){el.style.display=el.style.display==='none'?'block':'none';}

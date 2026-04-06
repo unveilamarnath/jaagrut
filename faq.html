@@ -17,6 +17,77 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","GA_MEASUREMENT_ID");</script> -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=DM+Sans:wght@0,300;0,400;0,500&amp;display=swap" rel="stylesheet"/>
 <link href="assets/css/style.css" rel="stylesheet"/>
+<style>
+body {
+  background: #f7f5f1;
+}
+main {
+  padding: 36px 0;
+}
+.inn {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+section {
+  padding: 48px 0;
+}
+.faq {
+  display: grid;
+  gap: 18px;
+}
+.faq-item {
+  border: 1px solid rgba(4, 50, 84, 0.15);
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 22px 45px rgba(4, 50, 84, 0.06);
+  overflow: hidden;
+}
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 26px;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  font-weight: 600;
+  color: #043254;
+  cursor: pointer;
+}
+.faq-q::-webkit-details-marker {
+  display: none;
+}
+.faq-q::marker {
+  content: none;
+}
+.faq-q::after {
+  content: "▾";
+  font-size: 1rem;
+  transition: transform 180ms ease;
+  color: #043254;
+}
+details[open] .faq-q::after {
+  transform: rotate(180deg);
+}
+.faq-a {
+  padding: 0 26px 24px;
+  color: #424242;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+@media (max-width: 680px) {
+  .inn {
+    padding: 0 18px;
+  }
+  .faq-q {
+    padding: 18px;
+    font-size: 1rem;
+  }
+  .faq-a {
+    padding: 0 18px 20px;
+  }
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -67,7 +138,7 @@
 <a class="mob-menu-cta" href="book-diagnostic.html">Schedule a Diagnostic Test →</a>
 </div>
 <main>
-<section id="main-content" style="padding-top:152px;padding-bottom:80px;background:var(--cream-d);border-bottom:.5px solid var(--border);">
+<section id="main-content" style="background:var(--cream-d);border-bottom:.5px solid var(--border);">
 <div class="inn">
 <div class="lbl">Questions parents ask</div>
 <h1 class="h1">Frequently asked<br/><em>questions.</em></h1>
@@ -77,16 +148,16 @@
 <section>
 <div class="inn">
 <div class="faq">
-<div class="faq-item"><div class="faq-q">Is online tutoring as effective as in-person for Mathematics and Science?</div><div class="faq-a">For concept-based subjects, online teaching works well when the batch is small and the teacher can see and respond to the student in real time. Jaagrut has been teaching online since 2007 — not as a pandemic adaptation but as a deliberate choice. Every class is live, two-way, and interactive.</div></div>
-<div class="faq-item"><div class="faq-q">What subjects does Jaagrut teach?</div><div class="faq-a">Mathematics and Science — Physics, Chemistry and Biology — across Grades 6 through 12.</div></div>
-<div class="faq-item"><div class="faq-q">Which boards and curricula do you support?</div><div class="faq-a">CBSE, ICSE, ISC, State boards, and international curricula including IGCSE, A Levels, and the Australian and American systems. If your child’s board is not listed here, reach out — we will tell you honestly whether we can help.</div></div>
-<div class="faq-item"><div class="faq-q">How does the diagnostic assessment work?</div><div class="faq-a">Your child takes an online assessment — recommended duration 90 minutes, with up to 120 minutes available. We deliver a detailed written report covering gaps, strengths and a clear batch recommendation, followed by a short discussion with one of our experienced teachers. The fee is ₹250, adjusted against your first payment if you join.</div></div>
-<div class="faq-item"><div class="faq-q">How will I know if my child is actually learning — not just attending?</div><div class="faq-a">Every student is tested independently by the Q-Team — a separate group of teachers who have not taught your child. Their scores are not influenced by familiarity. You also receive a written update every 30 days documenting progress against the delivery calendar.</div></div>
-<div class="faq-item"><div class="faq-q">How large are the batches?</div><div class="faq-a">Jaagrut batches are small by design. The diagnostic determines whether your child joins a Regular batch, a Fast batch, or 1-1 sessions. 1-1 is available to any student at any time.</div></div>
-<div class="faq-item"><div class="faq-q">We are based outside India. Can Jaagrut teach our child?</div><div class="faq-a">Yes. Jaagrut works with students in Australia, the UK, the USA, Switzerland, Singapore, Dubai, Saudi Arabia, Bahrain, Zambia and other countries. We have experience with international curricula and will confirm whether we can help before you commit anything.</div></div>
-<div class="faq-item"><div class="faq-q">What is the refund policy?</div><div class="faq-a">For group batches — full refund within 15 days of classes commencing. After that, a proportionate refund based on portions not yet tested by the Q-Team. For 1-1 — no refunds, except if Jaagrut cancels a class or a teacher becomes unavailable, in which case unused hours are refunded.</div></div>
-<div class="faq-item"><div class="faq-q">My child is struggling significantly. Will Jaagrut still admit them?</div><div class="faq-a">Yes. The diagnostic is not an entrance test — it is a placement tool. A student who scores low is placed in 1-1 where individual attention addresses the gaps directly. We begin with a free 30-minute trial class so you can see the approach before committing.</div></div>
-<div class="faq-item"><div class="faq-q">What equipment does my child need?</div><div class="faq-a">A laptop or desktop with a stable internet connection, a webcam and a microphone. Classes are conducted on Microsoft Teams and Google Meet. A Wacom pen tablet is strongly recommended — particularly for 1-1 classes — as it allows both student and teacher to write on a shared screen, which makes a significant difference in how Mathematics and Science are taught and understood.</div></div>
+<details class="faq-item"><summary class="faq-q">Is online tutoring as effective as in-person for Mathematics and Science?</summary><div class="faq-a">For concept-based subjects, online teaching works well when the batch is small and the teacher can see and respond to the student in real time. Jaagrut has been teaching online since 2007 — not as a pandemic adaptation but as a deliberate choice. Every class is live, two-way, and interactive.</div></details>
+<details class="faq-item"><summary class="faq-q">What subjects does Jaagrut teach?</summary><div class="faq-a">Mathematics and Science — Physics, Chemistry and Biology — across Grades 6 through 12.</div></details>
+<details class="faq-item"><summary class="faq-q">Which boards and curricula do you support?</summary><div class="faq-a">CBSE, ICSE, ISC, State boards, and international curricula including IGCSE, A Levels, and the Australian and American systems. If your child’s board is not listed here, reach out — we will tell you honestly whether we can help.</div></details>
+<details class="faq-item"><summary class="faq-q">How does the diagnostic assessment work?</summary><div class="faq-a">Your child takes an online assessment — recommended duration 90 minutes, with up to 120 minutes available. We deliver a detailed written report covering gaps, strengths and a clear batch recommendation, followed by a short discussion with one of our experienced teachers. The fee is ₹250, adjusted against your first payment if you join.</div></details>
+<details class="faq-item"><summary class="faq-q">How will I know if my child is actually learning — not just attending?</summary><div class="faq-a">Every student is tested independently by the Q-Team — a separate group of teachers who have not taught your child. Their scores are not influenced by familiarity. You also receive a written update every 30 days documenting progress against the delivery calendar.</div></details>
+<details class="faq-item"><summary class="faq-q">How large are the batches?</summary><div class="faq-a">Jaagrut batches are small by design. The diagnostic determines whether your child joins a Regular batch, a Fast batch, or 1-1 sessions. 1-1 is available to any student at any time.</div></details>
+<details class="faq-item"><summary class="faq-q">We are based outside India. Can Jaagrut teach our child?</summary><div class="faq-a">Yes. Jaagrut works with students in Australia, the UK, the USA, Switzerland, Singapore, Dubai, Saudi Arabia, Bahrain, Zambia and other countries. We have experience with international curricula and will confirm whether we can help before you commit anything.</div></details>
+<details class="faq-item"><summary class="faq-q">What is the refund policy?</summary><div class="faq-a">For group batches — full refund within 15 days of classes commencing. After that, a proportionate refund based on portions not yet tested by the Q-Team. For 1-1 — no refunds, except if Jaagrut cancels a class or a teacher becomes unavailable, in which case unused hours are refunded.</div></details>
+<details class="faq-item"><summary class="faq-q">My child is struggling significantly. Will Jaagrut still admit them?</summary><div class="faq-a">Yes. The diagnostic is not an entrance test — it is a placement tool. A student who scores low is placed in 1-1 where individual attention addresses the gaps directly. We begin with a free 30-minute trial class so you can see the approach before committing.</div></details>
+<details class="faq-item"><summary class="faq-q">What equipment does my child need?</summary><div class="faq-a">A laptop or desktop with a stable internet connection, a webcam and a microphone. Classes are conducted on Microsoft Teams and Google Meet. A Wacom pen tablet is strongly recommended — particularly for 1-1 classes — as it allows both student and teacher to write on a shared screen, which makes a significant difference in how Mathematics and Science are taught and understood.</div></details>
 </div>
 </div>
 </section>
@@ -155,6 +226,6 @@
         <li><a href="jee-neet.html">JEE &amp; NEET</a></li>
         <li><a href="kcet.html">KCET</a></li>
       </ul>
-      <div class="ft-legal">© 2025 Jaagrut Educational Services Pvt Ltd<br />Google Rating: 4.8 · Est. 2007</div>
+      <div class="ft-legal">© <span id="year"></span> Jaagrut Educational Services Pvt Ltd. Google Rating: 4.8 · Est. 2007</div>
     </div>
   </footer><script src="assets/js/main.js"></script></body></html>
